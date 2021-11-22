@@ -8,3 +8,6 @@
 # References
 #### API
 https://rapidapi.com/ubillarnet/api/google-news1/  
+
+#### Gson
+https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.9
