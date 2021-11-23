@@ -1,7 +1,5 @@
 package com.example.f21comp1011s1assignment2;
 
-import com.google.gson.annotations.SerializedName;
-
 public class ApiResponse {
     private int statusCode;
 

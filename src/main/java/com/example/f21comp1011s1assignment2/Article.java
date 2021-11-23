@@ -25,7 +25,7 @@ public class Article {
 
     /*
      * The JSON library uses the default constructor that handles the reflection.
-     *       So, JSON won't trigger validations on setters
+     *       So, JSON won't trigger your validations on setters
      * */
     public ArticleSource getSource() {
         return source;
