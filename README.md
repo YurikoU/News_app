@@ -8,6 +8,7 @@
 # References
 #### API
 https://rapidapi.com/ubillarnet/api/google-news1/  
+API key: 02d7edb424msh1a7c16782d05e7ep1ed539jsna26486f8d5d2
 
 #### Gson
 https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.9
