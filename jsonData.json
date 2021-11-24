@@ -1,0 +1,95 @@
+{
+  "statusCode": 200,
+  "articles": [
+    {
+      "published_date": "2021-11-18T16:38:00+00:00",
+      "title": "More than a million people in the US may not have regained sense of smell months after Covid-19 infection, study estimates - CNN",
+      "link": "https://www.cnn.com/2021/11/18/health/covid-loss-of-smell-wellness/index.html",
+      "source": {
+        "title": "CNN",
+        "url": "https://www.cnn.com"
+      }
+    },
+    {
+      "published_date": "2021-11-10T08:00:00+00:00",
+      "title": "Nearly 1 million U.S. kids under 12 expected to receive first COVID-19 vaccine - CTV News",
+      "link": "https://www.ctvnews.ca/health/coronavirus/nearly-1-million-u-s-kids-under-12-expected-to-receive-first-covid-19-vaccine-1.5660158",
+      "source": {
+        "title": "CTV News",
+        "url": "https://www.ctvnews.ca"
+      }
+    },
+    {
+      "published_date": "2021-11-18T17:55:00+00:00",
+      "title": "‘Zero-Covid is not going to happen’: experts predict a steep rise in US cases this winter - The Guardian",
+      "link": "https://www.theguardian.com/world/2021/nov/18/zero-covid-experts-predict-rise-us-cases-winter",
+      "source": {
+        "title": "The Guardian",
+        "url": "https://www.theguardian.com"
+      }
+    },
+    {
+      "published_date": "2021-11-21T06:47:50+00:00",
+      "title": "Who, and Where, Is Chinese Tennis Star Peng Shuai? - The New York Times",
+      "link": "https://www.nytimes.com/2021/11/21/world/asia/where-is-peng-shuai.html",
+      "source": {
+        "title": "The New York Times",
+        "url": "https://www.nytimes.com"
+      }
+    },
+    {
+      "published_date": "2021-11-22T23:25:18+00:00",
+      "title": "SAS and Zencos combat money laundering - iTWire",
+      "link": "https://itwire.com/security/sas-and-zencos-combat-anti-money-laundering.html",
+      "source": {
+        "title": "iTWire",
+        "url": "https://itwire.com"
+      }
+    },
+    {
+      "published_date": "2021-10-26T07:00:00+00:00",
+      "title": "Opinion | America’s Crumbling Global Position - The New York Times",
+      "link": "https://www.nytimes.com/2021/10/26/opinion/us-military-russia-china-iran.html",
+      "source": {
+        "title": "The New York Times",
+        "url": "https://www.nytimes.com"
+      }
+    },
+    {
+      "published_date": "2021-09-16T07:00:00+00:00",
+      "title": "'I have one concern': Dr. Gupta addresses 5th grade boy's vaccine hesitancy - CNN",
+      "link": "https://www.cnn.com/videos/health/2021/09/16/sanjay-gupta-students-kids-ask-questions-about-covid-vaccines-orig-llr.cnn",
+      "source": {
+        "title": "CNN",
+        "url": "https://www.cnn.com"
+      }
+    },
+    {
+      "published_date": "2021-10-12T07:00:00+00:00",
+      "title": "OSHA submits vaccine rule to the Office of Management and Budget, jump-starting review process - CNN",
+      "link": "https://www.cnn.com/2021/10/12/politics/covid-vaccine-rule-large-employers-biden-osha-omb/index.html",
+      "source": {
+        "title": "CNN",
+        "url": "https://www.cnn.com"
+      }
+    },
+    {
+      "published_date": "2021-08-27T07:00:00+00:00",
+      "title": "Supreme Court throws out Biden administration eviction moratorium - CNN",
+      "link": "https://www.cnn.com/2021/08/26/politics/supreme-court-eviction-moratorium/index.html",
+      "source": {
+        "title": "CNN",
+        "url": "https://www.cnn.com"
+      }
+    },
+    {
+      "published_date": "2021-07-12T07:00:00+00:00",
+      "title": "A copy of 'Super Mario 64' sold for over $1.5 million, the most ever paid for a video game - CNN",
+      "link": "https://www.cnn.com/style/article/super-mario-auction-video-game-record-scli-intl/index.html",
+      "source": {
+        "title": "CNN",
+        "url": "https://www.cnn.com"
+      }
+    }
+  ]
+}

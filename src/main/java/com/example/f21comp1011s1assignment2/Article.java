@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Article {
     /*
-     * Declare instance variables; source, title, link, publishedDate, description, thumbnail
+     * Declare instance variables; source, title, link, publishedDate
      * */
     private ArticleSource source;
 
@@ -17,11 +17,6 @@ public class Article {
     //      Only for JSON, still refer to "published_date."
     @SerializedName("published_date")
     private String publishedDate;
-
-    private String description;
-
-    private String thumbnail;
-
 
     /*
      * The JSON library uses the default constructor that handles the reflection.
@@ -57,21 +52,5 @@ public class Article {
 
     public void setPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getThumbnail() {
-        return thumbnail;
-    }
-
-    public void setThumbnail(String thumbnail) {
-        this.thumbnail = thumbnail;
     }
 }

@@ -2,10 +2,9 @@ package com.example.f21comp1011s1assignment2;
 
 public class ArticleSource {
     /*
-     * Declare instance variables; url, title, favicon
+     * Declare instance variables; url, title
      * */
-    private String url, title, favicon;
-
+    private String url, title;
 
     /*
      * The JSON library uses the default constructor that handles the reflection.
@@ -25,13 +24,5 @@ public class ArticleSource {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getFavicon() {
-        return favicon;
-    }
-
-    public void setFavicon(String favicon) {
-        this.favicon = favicon;
     }
 }
