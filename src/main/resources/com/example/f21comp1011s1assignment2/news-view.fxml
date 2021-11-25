@@ -1,41 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="568.0" prefWidth="543.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f21comp1011s1assignment2.Controller.NewsViewController">
+<AnchorPane prefHeight="524.0" prefWidth="648.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f21comp1011s1assignment2.Controller.NewsViewController">
    <children>
       <HBox layoutX="147.0" layoutY="14.0">
          <children>
-            <Label id="title" fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="251.0" styleClass="root" stylesheets="@styles.css" text="News Reader" textAlignment="CENTER" />
+            <Label id="title" fx:id="headerLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="251.0" styleClass="root" stylesheets="@styles.css" text="News Reader" textAlignment="CENTER" />
          </children>
       </HBox>
-      <HBox layoutX="30.0" layoutY="138.0">
+      <HBox layoutX="30.0" layoutY="138.0" prefHeight="362.0" prefWidth="341.0">
          <children>
-            <ListView fx:id="resultDataListView" prefHeight="362.0" prefWidth="484.0" />
+            <ListView fx:id="resultDataListView" prefHeight="362.0" prefWidth="342.0" />
          </children>
       </HBox>
       <HBox layoutX="128.0" layoutY="65.0">
          <children>
-            <TextField fx:id="searchTermTextField" prefHeight="29.0" prefWidth="222.0" promptText="Search Term" />
-            <Button fx:id="exploreButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" stylesheets="@styles.css" text="Explore" textAlignment="CENTER">
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </Button>
+            <Group>
+               <children>
+                  <TextField fx:id="searchTermTextField" prefHeight="29.0" prefWidth="222.0" promptText="Search Term" />
+                  <Button fx:id="exploreButton" alignment="CENTER" contentDisplay="CENTER" layoutX="262.0" mnemonicParsing="false" onAction="#getSearchResult" stylesheets="@styles.css" text="Explore" textAlignment="CENTER" />
+               </children>
+            </Group>
          </children>
       </HBox>
-      <HBox layoutX="244.0" layoutY="109.0">
+      <HBox layoutX="244.0" layoutY="109.0" />
+      <VBox layoutX="406.0" layoutY="180.0">
          <children>
-            <Label fx:id="resultsLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="root" stylesheets="@styles.css" text="0 Results" textAlignment="CENTER" />
+            <Group>
+               <children>
+                  <Label fx:id="publishedDateLabel" styleClass="root" stylesheets="@styles.css" text="Published Date: " />
+                  <Label fx:id="titleLabel" layoutY="33.33333206176758" styleClass="root" stylesheets="@styles.css" text="Title: " />
+                  <Label fx:id="authorLabel" layoutY="66.66666412353516" styleClass="root" stylesheets="@styles.css" text="Author:" />
+                  <Label fx:id="topicLabel" layoutY="100.0" styleClass="root" stylesheets="@styles.css" text="Topic: " />
+                  <Label fx:id="countryLabel" layoutY="133.3333282470703" styleClass="root" stylesheets="@styles.css" text="Country:" />
+                  <Label fx:id="languageLabel" layoutY="166.6666717529297" styleClass="root" stylesheets="@styles.css" text="Language: " />
+                  <Button fx:id="viewArticleButton" alignment="CENTER" contentDisplay="CENTER" layoutY="206.6666717529297" mnemonicParsing="false" onAction="#viewArticle" text="View article" textAlignment="CENTER" />
+               </children>
+            </Group>
          </children>
-      </HBox>
-      <Button fx:id="moreDetailsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="524.0" mnemonicParsing="false" text="View more details" textAlignment="CENTER" />
+      </VBox>
+      <Group layoutX="254.0" layoutY="101.0">
+         <children>
+            <Label fx:id="searchTermLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="root" stylesheets="@styles.css" text="Search term: &quot;&quot;" textAlignment="CENTER" />
+            <Label fx:id="totalHitsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" styleClass="root" stylesheets="@styles.css" text="Total Hits: " textAlignment="CENTER" />
+         </children>
+      </Group>
    </children>
 </AnchorPane>

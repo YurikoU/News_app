@@ -1,12 +1,12 @@
-package com.example.f21comp1011s1assignment2;
+package com.example.f21comp1011s1assignment2.Models;
 
 import com.google.gson.annotations.SerializedName;
 
 public class ApiResponse {
 
     /*
-    * Instance variables
-    * */
+     * Instance variables
+     * */
     private Article[] articles;
 
     private int page;

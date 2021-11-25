@@ -74,7 +74,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.f21comp1011s1assignment2/com.example.f21comp1011s1assignment2.HelloApplication
+                                com.example.f21comp1011s1assignment2/com.example.f21comp1011s1assignment2.Main
                             </mainClass>
                         </configuration>
                     </execution>

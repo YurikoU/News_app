@@ -1,10 +1,8 @@
-package com.example.f21comp1011s1assignment2;
+package com.example.f21comp1011s1assignment2.Utilities;
 
+import com.example.f21comp1011s1assignment2.Models.ApiResponse;
 import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
-import javafx.scene.web.WebView;
 
-import java.io.FileReader;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -13,7 +11,7 @@ import java.net.http.HttpResponse;
 public class ApiUtility {
     //Header parameters of HttpRequest
     private static final String apiHost = "newscatcher.p.rapidapi.com";
-    private static final String apiKey  = "723127a008msh5f0756979223977p1cc23djsnf7870823e43b";
+    private static final String apiKey = "723127a008msh5f0756979223977p1cc23djsnf7870823e43b";
 
     /*
      * This method will call the API with the specific search term

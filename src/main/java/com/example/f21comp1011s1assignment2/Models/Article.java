@@ -1,4 +1,4 @@
-package com.example.f21comp1011s1assignment2;
+package com.example.f21comp1011s1assignment2.Models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -147,5 +147,10 @@ public class Article {
 
     public void setTopic(String topic) {
         this.topic = topic;
+    }
+
+    @Override
+    public String toString() {
+        return title;
     }
 }

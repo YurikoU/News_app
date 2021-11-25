@@ -11,4 +11,8 @@ module com.example.f21comp1011s1assignment2 {
     exports com.example.f21comp1011s1assignment2;
     exports com.example.f21comp1011s1assignment2.Controller;
     opens com.example.f21comp1011s1assignment2.Controller to com.google.gson, javafx.fxml;
+    exports com.example.f21comp1011s1assignment2.Utilities;
+    opens com.example.f21comp1011s1assignment2.Utilities to com.google.gson, javafx.fxml;
+    exports com.example.f21comp1011s1assignment2.Models;
+    opens com.example.f21comp1011s1assignment2.Models to com.google.gson, javafx.fxml;
 }
