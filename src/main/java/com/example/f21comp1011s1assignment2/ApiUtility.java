@@ -2,6 +2,7 @@ package com.example.f21comp1011s1assignment2;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
+import javafx.scene.web.WebView;
 
 import java.io.FileReader;
 import java.net.URI;
@@ -11,13 +12,14 @@ import java.net.http.HttpResponse;
 
 public class ApiUtility {
     //Header parameters of HttpRequest
-    private static final String apiHost = "google-news1.p.rapidapi.com";
-    private static final String apiKey = "723127a008msh5f0756979223977p1cc23djsnf7870823e43b";
+    private static final String apiHost = "newscatcher.p.rapidapi.com";
+    private static final String apiKey  = "723127a008msh5f0756979223977p1cc23djsnf7870823e43b";
 
     /*
      * This method will read the file called "jsonData.json" in the root of the project
      * and create an ApiResponse object.
      * */
+    /*
     public static ApiResponse getArticlesJsonFile() {
         //Create a GSON object
         Gson gson = new Gson();
@@ -40,6 +42,7 @@ public class ApiUtility {
 
         return response;
     }
+    */
 
     /*
      * This method will call the API with the specific search term
@@ -48,10 +51,10 @@ public class ApiUtility {
         //Once the search term contains white spaces, replace them with "%20"
         searchTerm = searchTerm.trim().replace(" ", "%20");
 
-        //Store the uri, host and key to retrieve the raw data
-        String uri = "https://google-news1.p.rapidapi.com/search?q="
+        //Store the uri to retrieve the raw data
+        String uri = "https://newscatcher.p.rapidapi.com/v1/search_free?q="
                 + searchTerm
-                + "&country=CA&lang=en&source=cnn.com&limit=50&when=1m";
+                + "&lang=en&media=True";
 
         HttpClient client = HttpClient.newHttpClient();
         HttpResponse<String> response = null;
@@ -78,10 +81,9 @@ public class ApiUtility {
 
         Gson gson = new Gson();
 
-        ApiResponse apiResponse = null;
-
         //Return the ApiResponse object without using file system
-        apiResponse = gson.fromJson(jsonString, ApiResponse.class);
+        ApiResponse apiResponse = gson.fromJson(jsonString, ApiResponse.class);
+
 
         return apiResponse;
     }
