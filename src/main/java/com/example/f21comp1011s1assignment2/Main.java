@@ -11,6 +11,7 @@ public class Main {
 
         //Get the URL for the main content of the first article
         String url = result.getArticles()[0].getLink();
+        //System.out.println(url);
 
         WebView webView = new WebView();
         webView.getEngine().loadContent(String.valueOf(url));

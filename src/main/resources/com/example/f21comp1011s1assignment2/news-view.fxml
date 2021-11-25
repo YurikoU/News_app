@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="568.0" prefWidth="543.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f21comp1011s1assignment2.Controller.NewsViewController">
+   <children>
+      <HBox layoutX="147.0" layoutY="14.0">
+         <children>
+            <Label id="title" fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="251.0" styleClass="root" stylesheets="@styles.css" text="News Reader" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="138.0">
+         <children>
+            <ListView fx:id="resultDataListView" prefHeight="362.0" prefWidth="484.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="128.0" layoutY="65.0">
+         <children>
+            <TextField fx:id="searchTermTextField" prefHeight="29.0" prefWidth="222.0" promptText="Search Term" />
+            <Button fx:id="exploreButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" stylesheets="@styles.css" text="Explore" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="244.0" layoutY="109.0">
+         <children>
+            <Label fx:id="resultsLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="root" stylesheets="@styles.css" text="0 Results" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <Button fx:id="moreDetailsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="524.0" mnemonicParsing="false" text="View more details" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

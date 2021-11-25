@@ -1,0 +1,18 @@
+.root {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #4781eb;
+    -fx-text-fill: #f4f4f6;
+}
+
+.button {
+    -fx-background-color: #f4f4f6;
+    -fx-text-fill: #1f2837;
+    -fx-font-family: 'Nunito', sans-serif;
+}
+
+#title{
+    -fx-font-size: 35px;
+    -fx-font-family: 'Nunito', sans-serif;
+}
+

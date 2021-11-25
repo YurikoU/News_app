@@ -1,15 +1,20 @@
 # About Me
-- Student Name: Yuriko Uchida
-- Student Number: #200448500
-- Georgian College
-- 21F Adv Object Oriented Prog-Java - 01 (COMP1011)
+- Student Name: Yuriko Uchida  
+- Student Number: #200448500  
+- Georgian College  
+- 21F Adv Object Oriented Prog-Java - 01 (COMP1011)  
 
 
 # References
 ### API
-https://rapidapi.com/ubillarnet/api/google-news1/  
-published by ubillarnet  
+https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/newscatcher/  
+published by Newscatcher API  
+~~https://rapidapi.com/ubillarnet/api/google-news1/~~  
+~~published by ubillarnet~~  
 X-RapidAPI-Key (Application Key): 723127a008msh5f0756979223977p1cc23djsnf7870823e43b   
+
+### Font
+https://fonts.google.com/specimen/Nunito  
 
 ### Gson (version 2.8.9)
 https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.9
