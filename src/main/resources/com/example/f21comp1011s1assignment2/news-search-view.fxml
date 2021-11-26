@@ -31,14 +31,11 @@
             </Group>
          </children>
       </VBox>
-      <Group layoutX="254.0" layoutY="101.0">
-         <children>
-            <Label fx:id="searchTermLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="root" stylesheets="@styles.css" text="Search Term: &quot;&quot;" textAlignment="CENTER" />
-            <Label fx:id="totalHitsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" styleClass="root" stylesheets="@styles.css" text="Total Hits: " textAlignment="CENTER" />
-         </children>
-      </Group>
-      <TextField fx:id="searchTermTextField" layoutX="166.0" layoutY="65.0" prefHeight="29.0" prefWidth="222.0" promptText="Search Term" />
-      <Button fx:id="exploreButton" alignment="CENTER" contentDisplay="CENTER" layoutX="418.0" layoutY="65.0" mnemonicParsing="false" onAction="#getSearchResult" stylesheets="@styles.css" text="Explore" textAlignment="CENTER" />
+      <Group layoutX="91.0" layoutY="104.0" />
+      <TextField fx:id="searchTermTextField" layoutX="165.0" layoutY="65.0" prefHeight="29.0" prefWidth="222.0" promptText="Search Term" />
+      <Button fx:id="exploreButton" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="65.0" mnemonicParsing="false" onAction="#getSearchResult" stylesheets="@styles.css" text="Explore" textAlignment="CENTER" />
       <Label id="title" fx:id="headerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="14.0" prefHeight="51.0" prefWidth="446.0" styleClass="root" stylesheets="@styles.css" text="Search News by The Term" textAlignment="CENTER" />
+      <Label fx:id="totalHitsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="103.0" prefHeight="20.0" styleClass="root" stylesheets="@styles.css" text="Total Hits: " textAlignment="CENTER" />
+      <Label fx:id="searchTermLabel" contentDisplay="CENTER" layoutX="294.0" layoutY="103.0" prefHeight="20.0" styleClass="root" stylesheets="@styles.css" text="Search Term: &quot;&quot;" textAlignment="CENTER" />
    </children>
 </AnchorPane>

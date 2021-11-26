@@ -10,11 +10,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneChanger {
-    public static void change(ActionEvent event, String fmxlFileLocation, String sceneTitle) throws IOException
-    {
+    public static void change(ActionEvent event, String fmxlFileLocation, String sceneTitle) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fmxlFileLocation));
         Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(sceneTitle);
         stage.setScene(scene);
         stage.show();

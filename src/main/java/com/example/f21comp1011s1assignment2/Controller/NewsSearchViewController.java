@@ -70,13 +70,21 @@ public class NewsSearchViewController implements Initializable {
             (observableValueValue, oldArticle, articleSelected) -> {
                 if(articleSelected != null)
                 {
-                    publishedDateLabel.setText("Published Date: " + articleSelected.getPublishedDate());
+                    publishedDateLabel.setText("Published Date: " + articleSelected.getPublishedDate().substring(0,10));
                     titleLabel.setText("Title: " + articleSelected.getTitle());
                     authorLabel.setText("Author: " + articleSelected.getAuthor());
                     topicLabel.setText("Topic: " + articleSelected.getTopic());
-                    countryLabel.setText("country: " + articleSelected.getCountry());
+                    countryLabel.setText("Country: " + articleSelected.getCountry());
                     languageLabel.setText("Language: " + articleSelected.getLanguage());
                     setLabelsVisibility(true);
+                    if (articleSelected.getAuthor() == null)
+                    {
+                        authorLabel.setText("Author: -");
+                    }
+                    if(articleSelected.getCountry() == "unknown")
+                    {
+                        countryLabel.setText("Country: -");
+                    }
                 } else
                 {
                     //Unless an article is selected, the labels are still invisible
@@ -85,7 +93,7 @@ public class NewsSearchViewController implements Initializable {
         });
 
         //Set the labels as invisible by default
-        //setLabelsVisibility(false);
+        setLabelsVisibility(false);
 
         //Show the number of results
         totalHitsLabel.setText("Total Hits : 0");
@@ -111,6 +119,8 @@ public class NewsSearchViewController implements Initializable {
         //Set the number of rows
         searchTermLabel.setText("Search Term: \"" + searchTermTextField.getText() + "\"");
         setNumOfTotalHits(apiResponse);
+
+        searchTermTextField.clear();
     }
 
 

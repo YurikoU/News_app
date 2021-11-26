@@ -26,7 +26,6 @@ public class ApiUtility {
                 + "&lang=en&media=True";
 
         HttpClient client = HttpClient.newHttpClient();
-        HttpResponse<String> response = null;
 
         //Pass the URI and form the http request object
         HttpRequest request = HttpRequest
@@ -34,8 +33,11 @@ public class ApiUtility {
                 .uri(URI.create(uri))
                 .header("x-rapidapi-host", apiHost)
                 .header("x-rapidapi-key", apiKey)
-                .method("GET", HttpRequest.BodyPublishers.noBody())
+                //.method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
+
+        HttpResponse<String> response = null;
+        ApiResponse apiResponse = null;
 
         try {
             //This approach stores the API response to a string and then creates objects
@@ -51,8 +53,7 @@ public class ApiUtility {
         Gson gson = new Gson();
 
         //Return the ApiResponse object without using file system
-        ApiResponse apiResponse = gson.fromJson(jsonString, ApiResponse.class);
-
+        apiResponse = gson.fromJson(jsonString, ApiResponse.class);
 
         return apiResponse;
     }
