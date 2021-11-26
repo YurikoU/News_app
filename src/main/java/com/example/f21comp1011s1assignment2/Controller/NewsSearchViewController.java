@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class NewsViewController implements Initializable {
+public class NewsSearchViewController implements Initializable {
 
     @FXML
     private Label authorLabel;
@@ -53,31 +53,29 @@ public class NewsViewController implements Initializable {
     private Label topicLabel;
 
     @FXML
-    private Button viewArticleButton;
+    private Button viewThisArticleButton;
 
     @FXML
     private Label headerLabel;
 
-    private String searchTerm;
 
     /*
-    * Default settings
+    * Initial settings
     * */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.searchTerm = this.searchTermTextField.getText();
 
         //Once any article is selected, show the brief description
-        this.resultDataListView.getSelectionModel().selectedItemProperty().addListener(
+        resultDataListView.getSelectionModel().selectedItemProperty().addListener(
             (observableValueValue, oldArticle, articleSelected) -> {
                 if(articleSelected != null)
                 {
-                    this.publishedDateLabel.setText(articleSelected.getPublishedDate());
-                    this.titleLabel.setText(articleSelected.getTitle());
-                    this.authorLabel.setText(articleSelected.getAuthor());
-                    this.topicLabel.setText(articleSelected.getTopic());
-                    this.countryLabel.setText(articleSelected.getCountry());
-                    this.languageLabel.setText(articleSelected.getLanguage());
+                    publishedDateLabel.setText("Published Date: " + articleSelected.getPublishedDate());
+                    titleLabel.setText("Title: " + articleSelected.getTitle());
+                    authorLabel.setText("Author: " + articleSelected.getAuthor());
+                    topicLabel.setText("Topic: " + articleSelected.getTopic());
+                    countryLabel.setText("country: " + articleSelected.getCountry());
+                    languageLabel.setText("Language: " + articleSelected.getLanguage());
                     setLabelsVisibility(true);
                 } else
                 {
@@ -85,26 +83,32 @@ public class NewsViewController implements Initializable {
                     setLabelsVisibility(false);
                 }
         });
+
         //Set the labels as invisible by default
-        setLabelsVisibility(false);
+        //setLabelsVisibility(false);
 
         //Show the number of results
-        setNumOfTotalHits();
+//        setNumOfTotalHits();
+        totalHitsLabel.setText("Total Hits : 0");
     }
 
     @FXML
     private void getSearchResult(ActionEvent event)
     {
         //Clear the current list out
-        this.resultDataListView.getItems().clear();
+        resultDataListView.getItems().clear();
 
         //Get the API response
-        ApiResponse apiResponse = ApiUtility.getArticlesFromApi(this.searchTerm);
+        ApiResponse apiResponse = ApiUtility.getArticlesFromApi(searchTermTextField.getText());
         if(apiResponse != null)
         {
             //Once it finds some articles, display them
-            this.resultDataListView.getItems().addAll(apiResponse.getArticles());
+            resultDataListView.getItems().addAll(apiResponse.getArticles());
         }
+
+        int numOfTotalHits = apiResponse.getTotalHits();
+        //Set the number of rows
+        totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
     }
 
 
@@ -113,13 +117,13 @@ public class NewsViewController implements Initializable {
     * */
     public void setLabelsVisibility(boolean visibility)
     {
-        this.publishedDateLabel.setVisible(visibility);
-        this.titleLabel.setVisible(visibility);
-        this.authorLabel.setVisible(visibility);
-        this.topicLabel.setVisible(visibility);
-        this.countryLabel.setVisible(visibility);
-        this.languageLabel.setVisible(visibility);
-        this.viewArticleButton.setVisible(visibility);
+        publishedDateLabel.setVisible(visibility);
+        titleLabel.setVisible(visibility);
+        authorLabel.setVisible(visibility);
+        topicLabel.setVisible(visibility);
+        countryLabel.setVisible(visibility);
+        languageLabel.setVisible(visibility);
+        viewThisArticleButton.setVisible(visibility);
     }
 
 
@@ -129,12 +133,26 @@ public class NewsViewController implements Initializable {
     public void setNumOfTotalHits()
     {
         //Reload the list view obj
-        this.resultDataListView.refresh();
+        resultDataListView.refresh();
 
-        //int numOfTotalHits = this.apiResponse.getTotalHits();
+/*        if (searchTermLabel.getText() != null)
+        {
+            int numOfTotalHits = ApiUtility.getArticlesFromApi(searchTermLabel.getText()).getTotalHits();
 
-        //Set the number of rows
-        //this.totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
+            //Set the number of rows
+            if(0 < numOfTotalHits)
+            {
+                totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
+            }
+            else
+            {
+                totalHitsLabel.setText("Total Hits : 0");
+            }
+        } else
+        {
+            totalHitsLabel.setText("Total Hits : 0");
+        }*/
+
     }
 
 
@@ -142,10 +160,10 @@ public class NewsViewController implements Initializable {
     * Switch the JavaFX scene
     * */
     @FXML
-    public void viewArticle(ActionEvent event)
+    public void viewThisArticle(ActionEvent event)
     {
         try {
-            SceneChanger.change(event, "news-view.fxml", "Article Details");
+            SceneChanger.change(event, "news-details-view.fxml", "The Details of The News");
         } catch (IOException e) {
             e.printStackTrace();
         }
