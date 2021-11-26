@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="524.0" prefWidth="648.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f21comp1011s1assignment2.Controller.NewsDetailsViewController">
    <children>
       <Label id="title" fx:id="articleTitleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="14.0" prefHeight="51.0" prefWidth="251.0" styleClass="root" stylesheets="@styles.css" text="News Details" textAlignment="CENTER" />
-      <Button fx:id="BackToArticleListButton" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="480.0" mnemonicParsing="false" onAction="#backToList" text="Back to Article List" textAlignment="CENTER" />
-      <WebView fx:id="articleDataWebView" layoutX="33.0" layoutY="72.0" prefHeight="403.0" prefWidth="582.0" />
+      <Button fx:id="BackToArticleListButton" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="480.0" mnemonicParsing="false" onAction="#backToList" stylesheets="@styles.css" text="Back to article list" textAlignment="CENTER" />
+      <WebView fx:id="articleDataWebView" layoutX="33.0" layoutY="72.0" prefHeight="403.0" prefWidth="582.0" styleClass="root" stylesheets="@styles.css" />
    </children>
 </AnchorPane>

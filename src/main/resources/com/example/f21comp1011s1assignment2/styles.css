@@ -8,11 +8,9 @@
 .button {
     -fx-background-color: #f4f4f6;
     -fx-text-fill: #1f2837;
-    -fx-font-family: 'Nunito', sans-serif;
 }
 
 #title{
     -fx-font-size: 35px;
-    -fx-font-family: 'Nunito', sans-serif;
 }
 

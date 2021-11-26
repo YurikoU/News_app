@@ -8,9 +8,7 @@
 # References
 ### API
 https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/newscatcher/  
-published by Newscatcher API  
-~~https://rapidapi.com/ubillarnet/api/google-news1/~~  
-~~published by ubillarnet~~  
+Published by Newscatcher API  
 X-RapidAPI-Key (Application Key): 723127a008msh5f0756979223977p1cc23djsnf7870823e43b   
 
 ### Font

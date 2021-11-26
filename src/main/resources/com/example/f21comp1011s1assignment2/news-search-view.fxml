@@ -13,7 +13,7 @@
    <children>
       <HBox layoutX="30.0" layoutY="138.0" prefHeight="362.0" prefWidth="341.0">
          <children>
-            <ListView fx:id="resultDataListView" prefHeight="362.0" prefWidth="342.0" />
+            <ListView fx:id="resultDataListView" prefHeight="362.0" prefWidth="342.0" stylesheets="@styles.css" />
          </children>
       </HBox>
       <VBox layoutX="406.0" layoutY="180.0">
@@ -33,12 +33,12 @@
       </VBox>
       <Group layoutX="254.0" layoutY="101.0">
          <children>
-            <Label fx:id="searchTermLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="root" stylesheets="@styles.css" text="Search term: &quot;&quot;" textAlignment="CENTER" />
+            <Label fx:id="searchTermLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="root" stylesheets="@styles.css" text="Search Term: &quot;&quot;" textAlignment="CENTER" />
             <Label fx:id="totalHitsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" styleClass="root" stylesheets="@styles.css" text="Total Hits: " textAlignment="CENTER" />
          </children>
       </Group>
       <TextField fx:id="searchTermTextField" layoutX="166.0" layoutY="65.0" prefHeight="29.0" prefWidth="222.0" promptText="Search Term" />
       <Button fx:id="exploreButton" alignment="CENTER" contentDisplay="CENTER" layoutX="418.0" layoutY="65.0" mnemonicParsing="false" onAction="#getSearchResult" stylesheets="@styles.css" text="Explore" textAlignment="CENTER" />
-      <Label id="title" fx:id="headerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="14.0" prefHeight="51.0" prefWidth="251.0" styleClass="root" stylesheets="@styles.css" text="News Reader" textAlignment="CENTER" />
+      <Label id="title" fx:id="headerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="14.0" prefHeight="51.0" prefWidth="446.0" styleClass="root" stylesheets="@styles.css" text="Search News by The Term" textAlignment="CENTER" />
    </children>
 </AnchorPane>

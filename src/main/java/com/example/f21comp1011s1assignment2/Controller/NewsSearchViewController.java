@@ -88,10 +88,12 @@ public class NewsSearchViewController implements Initializable {
         //setLabelsVisibility(false);
 
         //Show the number of results
-//        setNumOfTotalHits();
         totalHitsLabel.setText("Total Hits : 0");
     }
 
+    /*
+    * Action when the "Explore" button is clicked
+    * */
     @FXML
     private void getSearchResult(ActionEvent event)
     {
@@ -106,9 +108,9 @@ public class NewsSearchViewController implements Initializable {
             resultDataListView.getItems().addAll(apiResponse.getArticles());
         }
 
-        int numOfTotalHits = apiResponse.getTotalHits();
         //Set the number of rows
-        totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
+        searchTermLabel.setText("Search Term: \"" + searchTermTextField.getText() + "\"");
+        setNumOfTotalHits(apiResponse);
     }
 
 
@@ -128,31 +130,12 @@ public class NewsSearchViewController implements Initializable {
 
 
     /*
-     * Show the number of hits
+     * Set the number of hits
      * */
-    public void setNumOfTotalHits()
+    public void setNumOfTotalHits(ApiResponse response)
     {
-        //Reload the list view obj
-        resultDataListView.refresh();
-
-/*        if (searchTermLabel.getText() != null)
-        {
-            int numOfTotalHits = ApiUtility.getArticlesFromApi(searchTermLabel.getText()).getTotalHits();
-
-            //Set the number of rows
-            if(0 < numOfTotalHits)
-            {
-                totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
-            }
-            else
-            {
-                totalHitsLabel.setText("Total Hits : 0");
-            }
-        } else
-        {
-            totalHitsLabel.setText("Total Hits : 0");
-        }*/
-
+        int numOfTotalHits = response.getTotalHits();
+        totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
     }
 
 
