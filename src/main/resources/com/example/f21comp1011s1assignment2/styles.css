@@ -6,11 +6,20 @@
 }
 
 .button {
+    -fx-font-family: 'Nunito', sans-serif;
     -fx-background-color: #f4f4f6;
     -fx-text-fill: #1f2837;
 }
 
+.search-result {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-text-fill: #f4f4f6;
+    -fx-font-style: italic;
+}
+
 #title{
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-text-fill: #f4f4f6;
     -fx-font-size: 35px;
 }
 

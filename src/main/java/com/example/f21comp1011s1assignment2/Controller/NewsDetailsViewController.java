@@ -1,4 +1,5 @@
 package com.example.f21comp1011s1assignment2.Controller;
+
 import com.example.f21comp1011s1assignment2.Utilities.SceneChanger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,8 +34,7 @@ public class NewsDetailsViewController implements Initializable {
      * Switch the JavaFX scene
      * */
     @FXML
-    private void backToList(ActionEvent event)
-    {
+    private void backToList(ActionEvent event) {
         try {
             SceneChanger.change(event, "news-search-view.fxml", "Search News");
         } catch (IOException e) {

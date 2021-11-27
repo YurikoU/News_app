@@ -16,14 +16,25 @@ public class ApiUtility {
     /*
      * This method will call the API with the specific search term
      * */
-    public static ApiResponse getArticlesFromApi(String searchTerm) {
+    public static ApiResponse getArticlesFromApi(String searchTerm, String language) {
         //Once the search term contains white spaces, replace them with "%20"
         searchTerm = searchTerm.trim().replace(" ", "%20");
 
         //Store the uri to retrieve the raw data
-        String uri = "https://newscatcher.p.rapidapi.com/v1/search_free?q="
-                + searchTerm
-                + "&lang=en&media=True";
+        String uri;
+        if(language == null || language == "All")
+        {
+            uri = "https://newscatcher.p.rapidapi.com/v1/search_free?"
+                    + "q=" + searchTerm
+                    + "&lang=en"
+                    + "&page=1&media=True";
+        } else
+        {
+            uri = "https://newscatcher.p.rapidapi.com/v1/search_free?"
+                    + "q=" + searchTerm
+                    + "&lang=" + language
+                    + "&page=1&media=True";
+        }
 
         HttpClient client = HttpClient.newHttpClient();
 
