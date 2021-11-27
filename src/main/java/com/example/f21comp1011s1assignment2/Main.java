@@ -1,7 +1,5 @@
 package com.example.f21comp1011s1assignment2;
 
-import com.example.f21comp1011s1assignment2.Models.ApiResponse;
-import com.example.f21comp1011s1assignment2.Utilities.ApiUtility;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

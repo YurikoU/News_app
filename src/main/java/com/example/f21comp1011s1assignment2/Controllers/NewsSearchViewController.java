@@ -1,8 +1,8 @@
 package com.example.f21comp1011s1assignment2.Controllers;
 
 import com.example.f21comp1011s1assignment2.Models.ApiResponse;
-import com.example.f21comp1011s1assignment2.Utilities.ApiUtility;
 import com.example.f21comp1011s1assignment2.Models.Article;
+import com.example.f21comp1011s1assignment2.Utilities.ApiUtility;
 import com.example.f21comp1011s1assignment2.Utilities.SceneChanger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
