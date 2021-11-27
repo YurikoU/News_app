@@ -29,5 +29,6 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-web:win:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-media:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-media:win:11.0.2" level="project" />
+    <orderEntry type="library" name="javafx-sdk-16" level="project" />
   </component>
 </module>
