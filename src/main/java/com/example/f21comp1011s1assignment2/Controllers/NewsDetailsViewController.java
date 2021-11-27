@@ -1,4 +1,4 @@
-package com.example.f21comp1011s1assignment2.Controller;
+package com.example.f21comp1011s1assignment2.Controllers;
 
 import com.example.f21comp1011s1assignment2.Utilities.SceneChanger;
 import javafx.event.ActionEvent;

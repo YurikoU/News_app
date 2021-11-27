@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="563.0" prefWidth="683.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f21comp1011s1assignment2.Controller.NewsSearchViewController">
+<AnchorPane prefHeight="563.0" prefWidth="683.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f21comp1011s1assignment2.Controllers.NewsSearchViewController">
    <children>
       <HBox layoutX="25.0" layoutY="122.0" prefHeight="418.0" prefWidth="341.0">
          <children>

@@ -1,4 +1,4 @@
-package com.example.f21comp1011s1assignment2.Controller;
+package com.example.f21comp1011s1assignment2.Controllers;
 
 import com.example.f21comp1011s1assignment2.Models.ApiResponse;
 import com.example.f21comp1011s1assignment2.Utilities.ApiUtility;
@@ -14,7 +14,6 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.TreeSet;
 
 
 public class NewsSearchViewController implements Initializable {
@@ -78,18 +77,16 @@ public class NewsSearchViewController implements Initializable {
                         topicLabel.setText("Topic: " + articleSelected.getTopic());
                         countryLabel.setText("Country: " + articleSelected.getCountry());
                         languageLabel.setText("Language: " + articleSelected.getLanguage());
-                        setLabelsVisibility(true);
                         if (articleSelected.getAuthor() == null) {
                             authorLabel.setText("Author: -");
                         }
-                    } else {
-                        //Unless an article is selected, the labels are still invisible
-                        setLabelsVisibility(false);
+                        setVisibility(true, true);
                     }
                 });
 
-        //Set the labels as invisible by default
-        setLabelsVisibility(false);
+        //Set the labels and the list as invisible by default
+        setVisibility(false, false);
+
 
         //Show the number of results
         totalHitsLabel.setText("Total Hits : 0");
@@ -106,45 +103,50 @@ public class NewsSearchViewController implements Initializable {
     public void getSearchResult(ActionEvent event) {
         //Clear the current list out
         resultDataListView.getItems().clear();
-        totalHitsLabel.setText("Total Hits : 0");
+        setVisibility(false, false);
 
         String term = searchTermTextField.getText();
         String lang = specifyLanguageComboBox.getSelectionModel().getSelectedItem();
 
         //Get the API response
         ApiResponse apiResponse = ApiUtility.getArticlesFromApi(term, lang);
-        if (apiResponse != null) {
+        if (apiResponse.getArticles() != null) {
+            setVisibility(true, false);
             //Once it finds some articles, display them
             resultDataListView.getItems().addAll(apiResponse.getArticles());
         }
 
         //Set the number of rows
         searchTermLabel.setText("Search Term: \"" + searchTermTextField.getText() + "\"");
-        setNumOfTotalHits();
+        setNumOfTotalHits(apiResponse);
 
         //Clear the text field
         searchTermTextField.clear();
     }
 
     /*
-     * Switch the visibility of the article description
+     * Switch the visibility
      * */
-    public void setLabelsVisibility(boolean visibility) {
-        publishedDateLabel.setVisible(visibility);
-        titleLabel.setVisible(visibility);
-        authorLabel.setVisible(visibility);
-        topicLabel.setVisible(visibility);
-        countryLabel.setVisible(visibility);
-        languageLabel.setVisible(visibility);
-        viewThisArticleButton.setVisible(visibility);
+    public void setVisibility(boolean newsFound, boolean newsSelected) {
+        //Only when it finds articles, the list is shown
+        resultDataListView.setVisible(newsFound);
+
+        //Only when any article is selected, these are shown
+        publishedDateLabel.setVisible(newsSelected);
+        titleLabel.setVisible(newsSelected);
+        authorLabel.setVisible(newsSelected);
+        topicLabel.setVisible(newsSelected);
+        countryLabel.setVisible(newsSelected);
+        languageLabel.setVisible(newsSelected);
+        viewThisArticleButton.setVisible(newsSelected);
     }
 
 
     /*
      * Set the number of hits
      * */
-    public void setNumOfTotalHits() {
-        int numOfTotalHits = resultDataListView.getItems().size();
+    public void setNumOfTotalHits(ApiResponse apiResponse) {
+        int numOfTotalHits = apiResponse.getArticles().length;
         totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
     }
 
