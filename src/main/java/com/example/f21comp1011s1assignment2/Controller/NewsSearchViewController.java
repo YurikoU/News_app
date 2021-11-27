@@ -143,8 +143,7 @@ public class NewsSearchViewController implements Initializable {
     /*
      * Set the number of hits
      * */
-    public void setNumOfTotalHits()
-    {
+    public void setNumOfTotalHits() {
         int numOfTotalHits = resultDataListView.getItems().size();
         totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
     }
@@ -153,16 +152,13 @@ public class NewsSearchViewController implements Initializable {
     /*
      * Switch the JavaFX scene
      * */
-    public void viewThisArticle(ActionEvent event)
-    {
+    public void viewThisArticle(ActionEvent event) {
         try {
             SceneChanger.change(event, "news-details-view.fxml", "The Details of The News");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
 
 
 }

@@ -21,21 +21,13 @@ public class ApiUtility {
         searchTerm = searchTerm.trim().replace(" ", "%20");
 
         //Store the uri to retrieve the raw data
-        String uri;
-        if(language == null || language == "All")
-        {
-            uri = "https://newscatcher.p.rapidapi.com/v1/search_free?"
-                    + "q=" + searchTerm
-                    + "&lang=en"
-                    + "&page=1&media=True";
-        } else
-        {
-            uri = "https://newscatcher.p.rapidapi.com/v1/search_free?"
-                    + "q=" + searchTerm
-                    + "&lang=" + language
-                    + "&page=1&media=True";
+        String uri = "https://newscatcher.p.rapidapi.com/v1/search_free?"
+                + "q=" + searchTerm
+                + "&page=1&media=True&ranked_only=True";
+        if (language != null && language != "All") {
+            //If the specific language is selected, add the language filter
+            uri += "&lang=" + language;
         }
-
         HttpClient client = HttpClient.newHttpClient();
 
         //Pass the URI and form the http request object
