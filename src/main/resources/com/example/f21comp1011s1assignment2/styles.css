@@ -23,3 +23,10 @@
     -fx-font-size: 35px;
 }
 
+#article-title{
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-text-fill: #f4f4f6;
+    -fx-font-size: 18px;
+}
+
+

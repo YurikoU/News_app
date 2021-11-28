@@ -46,7 +46,7 @@ public class NewsSearchViewController implements Initializable {
     private TextField searchTermTextField;
 
     @FXML
-    private Label titleLabel;
+    private Label summaryLabel;
 
     @FXML
     private Label topicLabel;
@@ -72,7 +72,7 @@ public class NewsSearchViewController implements Initializable {
                 (observableValueValue, oldArticle, articleSelected) -> {
                     if (articleSelected != null) {
                         publishedDateLabel.setText("Published Date: " + articleSelected.getPublishedDate().substring(0, 10));
-                        titleLabel.setText("Title: " + articleSelected.getTitle());
+                        summaryLabel.setText("Summary: " + articleSelected.getSummary());
                         authorLabel.setText("Author: " + articleSelected.getAuthor());
                         topicLabel.setText("Topic: " + articleSelected.getTopic());
                         countryLabel.setText("Country: " + articleSelected.getCountry());
@@ -92,7 +92,7 @@ public class NewsSearchViewController implements Initializable {
         totalHitsLabel.setText("Total Hits : 0");
 
         //Configure the combo box
-        List<String> validLanguages = Arrays.asList("en", "fr", "es", "de", "hi", "All");
+        List<String> validLanguages = Arrays.asList("en", "fr", "es", "de", "hi", "pa", "ar", "fa", "All");
         specifyLanguageComboBox.getItems().addAll(validLanguages);
     }
 
@@ -119,21 +119,19 @@ public class NewsSearchViewController implements Initializable {
         //Set the number of rows
         searchTermLabel.setText("Search Term: \"" + searchTermTextField.getText() + "\"");
         setNumOfTotalHits(apiResponse);
-
-        //Clear the text field
-        searchTermTextField.clear();
     }
 
     /*
      * Switch the visibility
      * */
+    @FXML
     public void setVisibility(boolean newsFound, boolean newsSelected) {
         //Only when it finds articles, the list is shown
         resultDataListView.setVisible(newsFound);
 
         //Only when any article is selected, these are shown
         publishedDateLabel.setVisible(newsSelected);
-        titleLabel.setVisible(newsSelected);
+        summaryLabel.setVisible(newsSelected);
         authorLabel.setVisible(newsSelected);
         topicLabel.setVisible(newsSelected);
         countryLabel.setVisible(newsSelected);
@@ -145,6 +143,7 @@ public class NewsSearchViewController implements Initializable {
     /*
      * Set the number of hits
      * */
+    @FXML
     public void setNumOfTotalHits(ApiResponse apiResponse) {
         int numOfTotalHits = apiResponse.getArticles().length;
         totalHitsLabel.setText("Total Hits : " + numOfTotalHits);
@@ -154,13 +153,10 @@ public class NewsSearchViewController implements Initializable {
     /*
      * Switch the JavaFX scene
      * */
-    public void viewThisArticle(ActionEvent event) {
-        try {
-            SceneChanger.change(event, "news-details-view.fxml", "The Details of The News");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void viewThisArticle(ActionEvent event) throws IOException {
+        Article articleSelected = resultDataListView.getSelectionModel().getSelectedItem();
+        SceneChanger.change(event, "news-details-view.fxml", "The Details of The News", articleSelected);
     }
-
 
 }

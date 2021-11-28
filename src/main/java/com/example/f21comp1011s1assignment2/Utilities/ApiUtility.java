@@ -28,6 +28,7 @@ public class ApiUtility {
             //If the specific language is selected, add the language filter
             uri += "&lang=" + language;
         }
+
         HttpClient client = HttpClient.newHttpClient();
 
         //Pass the URI and form the http request object
