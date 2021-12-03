@@ -8,14 +8,18 @@
 [How to search]  
 1) Enter any word you want to search in the text field.  
 2) (optional) Select the specific language you want. All languages are searched by default.  
-3) Press the "Explore" button.  
+3) Click the "Explore" button.  
 4) Then, you will see the list of news titles below the "Explore" button filtered by your input. The number of search results and the search term you entered just now are also shown in Italic.  
   
 [How to see the article information]  
-1) Once you get the news list by the above operation, click any article from the list you want.  
+1) Click any article from the list you want, once you get the news list by the above operation.
 2) The article information will be shown on the right side of the list, such as, published date, title, author, country, topic, language.  
-3) If you want to see another article information, click it in the same way.  
-4) Once you find the article you are interested in, click the "View this article" button below the article information.   
+3) If you want to see another article information, click it in the same way.
+ 
+[How to read the entire article]
+1) Click the "View this article" button below the news information, once you find the article you are interested in.
+2) On the next page, you'll see the entire article you selected.
+3) To go back to the news search page, simply click the "Back to article list."
 
 
 # References

@@ -125,18 +125,18 @@ public class NewsSearchViewController implements Initializable {
      * Switch the visibility
      * */
     @FXML
-    public void setVisibility(boolean newsFound, boolean newsSelected) {
+    public void setVisibility(boolean isNewsFound, boolean isNewsSelected) {
         //Only when it finds articles, the list is shown
-        resultDataListView.setVisible(newsFound);
+        resultDataListView.setVisible(isNewsFound);
 
         //Only when any article is selected, these are shown
-        publishedDateLabel.setVisible(newsSelected);
-        summaryLabel.setVisible(newsSelected);
-        authorLabel.setVisible(newsSelected);
-        topicLabel.setVisible(newsSelected);
-        countryLabel.setVisible(newsSelected);
-        languageLabel.setVisible(newsSelected);
-        viewThisArticleButton.setVisible(newsSelected);
+        publishedDateLabel.setVisible(isNewsSelected);
+        summaryLabel.setVisible(isNewsSelected);
+        authorLabel.setVisible(isNewsSelected);
+        topicLabel.setVisible(isNewsSelected);
+        countryLabel.setVisible(isNewsSelected);
+        languageLabel.setVisible(isNewsSelected);
+        viewThisArticleButton.setVisible(isNewsSelected);
     }
 
 
