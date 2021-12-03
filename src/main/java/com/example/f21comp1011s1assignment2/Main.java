@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("news-search-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Search News");
+        stage.setTitle("News Reader");
         stage.setScene(scene);
         stage.getIcons().add(
                 new Image(this.getClass().getResourceAsStream("icon.png"))
