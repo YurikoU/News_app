@@ -2,7 +2,7 @@
 - Student Name: Yuriko Uchida  
 - Student Number: #200448500  
 - Georgian College  
-- 21F Adv Object Oriented Prog-Java - 01 (COMP1011)  
+- 21F Adv Object Oriented Prog-Java - 01 (COMP1011)
 
 # How to Use
 [How to search]  
@@ -21,6 +21,8 @@
 2) On the next page, you'll see the entire article you selected.
 3) To go back to the news search page, simply click the "Back to article list."
 
+# Caution
+It is highly recommended to use this application with the stable and powerful internet as this application will search the real news on the internet. Otherwise, it may seem to show a blank page or take time to load, even if you click the "View this article" button on the news search page.
 
 # References
 ### API
