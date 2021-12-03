@@ -22,7 +22,7 @@
 3) To go back to the news search page, simply click the "Back to article list."
 
 # Caution
-It is highly recommended to use this application with the stable and powerful internet as this application will search the real news on the internet. Otherwise, it may seem to show a blank page or take time to load, even if you click the "View this article" button on the news search page.
+It is highly recommended to use this application with the stable and powerful internet as this application will search the real news on the internet. Otherwise, it may seem to show a blank page or take time to load the news detail page, even if you click the "View this article" button on the news search page.
 
 # References
 ### API
