@@ -1,9 +1,3 @@
-# About Me
-- Student Name: Yuriko Uchida
-- Student Number: #200448500
-- Georgian College
-- 21F Adv Object Oriented Prog-Java - 01 (COMP1011)
-
 # How to Use
 [How to search]
 1) Enter any word you want to search in the text field.
