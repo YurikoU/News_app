@@ -1,3 +1,6 @@
+<img width="517" alt="newsApplication" src="https://user-images.githubusercontent.com/76763897/185765891-0c0a26ce-476f-4431-b6bf-c3c4f331b537.png">
+
+
 # How to Use
 [How to search]
 1) Enter any word you want to search in the text field.
@@ -24,18 +27,7 @@ the real news on the internet. Otherwise, it may seem to show a blank page or ta
 even if you click the "View this article" button on the news search page.
 
 # References
-
-### API
-https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/newscatcher/  
-Published by Newscatcher API  
-X-RapidAPI-Key (Application Key): 723127a008msh5f0756979223977p1cc23djsnf7870823e43b
-
-### Font
-https://fonts.google.com/specimen/Nunito
-
-### Gson (version 2.8.9)
-https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.9
-
-### Icon
-https://www.flaticon.com/free-icon/newspaper_1074106?term=newspaper&page=1&position=24&page=1&position=24&related_id=1074106&origin=search  
-Author: Freepik  
+- [news API (Author : Newscatcher API)](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/newscatcher/)
+- [Google Fonts](https://fonts.google.com/specimen/Nunito)
+- [Gson (version 2.8.9)](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.9)
+- [Icon (Author : Freepik)](https://www.flaticon.com/free-icon/newspaper_1074106?term=newspaper&page=1&position=24&page=1&position=24&related_id=1074106&origin=search)
